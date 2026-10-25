@@ -3,7 +3,7 @@
 This repository contains the Proof of Concept (POC) codebase for my Master's Project Phase 1 (MPP-1) at Mahatma Gandhi University. It evaluates the vulnerability of rewrite-based AI text detectors against gradient-based discrete optimization.
 
 ## Project Overview
-Currently, the most prominent advancement in the rewrite based ai-text detection landscape is the Learning2Rewrite (L2R) framework. L2R shifts from traditional classification by relying on a behavioral quirk of LLMs ; when an LLM is prompted to rewrite a text, it significantly alters human written texts but makes minimal changes to the text it originally generated.
+A foundational advancement in the rewrite-based ai text detection landscape is the Learning2Rewrite (L2R) framework. L2R shifts from traditional classification by relying on a behavioral quirk of LLMs ; when an LLM is prompted to rewrite a text, it significantly alters human written texts but makes minimal changes to the text it originally generated.
 L2R fine-tunes a model to exaggerate this behavior, establishing a threshold based on the "edit distance" between the original input and the rewritten output. By measuring this structural variation, L2R establishes a massive edit distance for human text and a minor edit distance for AI text. Because of this unique methodology, L2R claims exceptional robustness, reportedly outperforming current state-of-the-art detectors by up to 48.66% under standard adversarial attacks.
 
 While L2R claims high resilience against basic "Decoherence" or standard paraphrasing attacks, its reliance on a static, mathematical edit distance metric introduces a vulnerability. Standard attacks fail because they apply blind, and generalized obfuscation.
